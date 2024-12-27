@@ -5,13 +5,13 @@ pipeline {
         DOCKER_IMAGE = 'thanhhuy1234ok/lap2-devops-jenkins'
         DOCKER_TAG = 'main'
         TELEGRAM_BOT_TOKEN = '6491846812:AAFEEkxM3JWVEtjMJQzB_RdJztPwT5W_9I0'
-        TELEGRAM_CHAT_ID = '-4027852461'
+        TELEGRAM_CHAT_ID = '6491846812'
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/thanhhuy1234ok/Lap2-DevOps-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/thanhhuy1234ok/Lap3-DevOps-Jenkins-notifitaion-tele.git'
             }
         }
 
