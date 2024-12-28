@@ -89,8 +89,6 @@ def sendTelegramMessage(String message = "") {
     if (message.isEmpty()) {
         error "Message cannot be empty"
     }
-    def apiToken = '6491846812:AAFEEkxM3JWVEtjMJQzB_RdJztPwT5W_9I0'
-    def chatId = '-4027852461'
-    def curlCmd = "curl -s -X POST https://api.telegram.org/bot${apiToken}/sendMessage -d chat_id=${chatId} -d text=\"${message}\""
+    def curlCmd = "curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d chat_id=${TELEGRAM_CHAT_ID} -d text=\"${message}\""
     sh curlCmd
 }
